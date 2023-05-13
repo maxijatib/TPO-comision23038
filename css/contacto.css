@@ -65,6 +65,7 @@ header {
 
 /* MAIN: pueden eliminar el contenido del main para que cada uno coloque su contenido en el CSS */
 
+/* Texto principal */
 .texto_formulario {
     padding: 4rem 5rem;
     text-align: center;
@@ -72,6 +73,7 @@ header {
     font-weight: 600;
     background-color: var(--colorClaro);
 }
+/* Seccion de datos de contacto + formulario */
 .contacto_container {
     display: flex;
     background-color: var(--colorSecundario);
@@ -85,7 +87,6 @@ header {
 }
 .datos_contacto article {
     display: flex;
-    justify-content: center;
     align-items: center;
     justify-content: space-evenly;
     margin: 2rem 0 3rem 0;
@@ -104,8 +105,38 @@ header {
     padding: 2rem 12rem 2rem 6rem;
     font-weight: 500;
 }
-
-
+/* Medias Queries */
+@media only screen and (max-width: 1300px){
+    .formulario {
+        width: 50%;
+        padding: 2rem 2rem 2rem 6rem;
+        font-weight: 500;
+    }
+    .datos_contacto article img {
+        height: 5rem;
+        margin-left: 3rem;
+    }
+}
+@media only screen and (max-width: 853px){
+    .formulario {
+        width: 100%;
+        padding: 2rem 2rem 2rem 6rem;
+        font-weight: 500;
+    }
+    .datos_contacto article img {
+        height: 5rem;
+        margin-left: 3rem;
+    }
+    .contacto_container {
+        display: flex;
+        flex-direction: column;
+        background-color: var(--colorSecundario);
+    }
+    .datos_contacto {
+        width: 100%;
+    }
+}
+/* Sección creada por Nicolás Fuentes - DNI 40.771.299 */
 /*-----------------------------------------------------------------------------------------------------------------*/
 
 /* FOOTER */
