@@ -11,6 +11,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="shortcut icon" href="/img/tuki-favicon.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
         <!--Font Awesome-->
         <script src="https://kit.fontawesome.com/9558700994.js" crossorigin="anonymous"></script>
         <!--Aanimaciones-->
@@ -30,48 +32,58 @@
         </nav>
     </header>
     <main>
-        <article class="texto_formulario">Es hora de pasar al siguiente nivel, y que tu empresa cuente con lo ultimo en Marketing Digital. <br><br>Nuestros servicios pueden ayudarte a hacer crecer tu negocio. <br>
-            <br>Nos gustaria conocerte!
+        <article class="texto_formulario"><p class="animate__animated animate__fadeInLeft">Es hora de pasar al siguiente nivel, y que tu empresa cuente con lo ultimo en Marketing Digital. <br><br>Nuestros servicios pueden ayudarte a hacer crecer tu negocio. <br>
+            <br>Nos gustaria conocerte!</p>
         </article>
         <section class="contacto_container">
             <section class="datos_contacto">
                 <article>
                     <img src="./img/email.png" alt="correo">
-                    <p><a>info@tuki.com.ar</a></p>
+                    <p><a style="color: black" href="mailto:someone@example.com">info@tuki.com.ar</a></p>
                 </article>
                 <article>
                     <img src="./img/localizacion.png" alt="Direccion">
-                    <p>Av. Álvarez Thomas 1321, C1427 CABA</p>
+                    <p><a style="color: black" href="https://goo.gl/maps/96bLpMve6z7qfrMy7">Av. Álvarez Thomas 1321, C1427 CABA </a></p>
                 </article>
                 <article>
-                    <img src="./img/llamada.png" alt="Telefono">
-                    <p> 011 - 1231-2312</p>
+                    <img src="./img/whatsapp.png" alt="Telefono">
+                    <p><a style="color: black;" href="https://www.whatsapp.com/?lang=es">+54 9 11 1234 1234</a></p>
+                </article>
+                <article>
+                    <img src="./img/horario-de-trabajo.png" alt="Telefono">
+                    <p> Lunes a Viernes de 09:00hs a 18:0hs</p>
                 </article>
             </section>
             <section class="formulario">
-                <form>
-                    <div class="mb-3">
-                        <input type="text" placeholder="Nombre / Empresa / Organizacion" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <div class="form_container">
+                    <form class="needs-validation" novalidate>
+                    <div class="col-10 mb-3">
+                        <label for="nameId" class="form-label">Nombre y Apellido o Empresa</label>
+                        <input type="text" class="form-control" id="nameId" required>
+                        <div class="invalid-feedback">Debe indicar un nombre.</div>
                     </div>
-                    <br>
-                    <div class="mb-3">
-                        <input type="text" placeholder="Correo electronico" class="form-control" id="exampleInputPassword1">
+                    <div class="col-10 mb-3">
+                        <label for="mailId" class="form-label">Correo electronico</label>
+                        <input type="email" class="form-control" id="mailId" required>
+                        <div class="invalid-feedback">Debe indicar un correo electronico valido.</div>
                     </div>
-                    <br>
-                    <select class="form-select" aria-label="Default select example">
-                        <option selected>Seleccione una consulta</option>
-                        <option value="1">Presupuestos</option>
-                        <option value="2">Consultas</option>
-                        <option value="3">Otro</option>
-                    </select>
-                    <br>
-                    <div class="form-floating">
-                        <textarea class="form-control" placeholder="Escriba su consulta." id="floatingTextarea2" style="height: 200px"></textarea>
-                        <label for="floatingTextarea2">Dejanos tu consulta!</label>
-                        <br>
+                    <div class="col-10 mb-3">
+                        <label for="choiceId" class="form-label">Seleccione una opcion</label>
+                        <select class="form-select" required aria-label="select example">
+                            <option value="">...</option>
+                            <option value="1">Presupuestos</option>
+                            <option value="2">Consultas</option>
+                            <option value="3">Otros</option>
+                        </select>
+                        <div class="invalid-feedback">Por favor, seleccione alguna de las opciones disponibles.</div>
+                    </div>
+                    <div class="col-10 mb-3">
+                        <label for="validationTextarea" class="form-label">Escriba su consulta:</label>
+                        <textarea class="form-control" id="validationTextarea" rows="4" placeholder="" required></textarea>
+                        <div class="invalid-feedback">Por favor, debe indicarnos su consulta.</div>
                     </div>
                     <button type="submit" class="btn btn-primary">Enviar</button>
-                </form>
+                    </form>
             </section>
         </section>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3285.0299910612543!2d-58.46303028477102!3d-34.57810768046617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb5dfaf720893%3A0x5910f2a90757313!2sLa%20Mezzetta!5e0!3m2!1ses!2sar!4v1683907626840!5m2!1ses!2sar" width="100%" height="500px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -90,6 +102,19 @@
             <p>&copy; Copyright 2023 Tuki</p>
         </section>
     </footer>
-
+    <script>  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        const forms = document.querySelectorAll('.needs-validation')
+        // Loop over them and prevent submission
+        Array.from(forms).forEach(form => {
+        form.addEventListener('submit', event => {
+            if (!form.checkValidity()) {
+                event.preventDefault()
+                event.stopPropagation()
+            }
+            form.classList.add('was-validated')
+        }, false)
+        })
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 </body>
 </html>
