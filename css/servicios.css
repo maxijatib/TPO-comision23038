@@ -1,0 +1,327 @@
+/* Globales */
+
+:root {
+    --colorPrimario: #2688BF;
+    --colorSecundario: #C1DFE1;
+    --colorClaro: #fff;
+    --colorOscuro: #1E1E1E;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*-----------------------------------------------------------------------------------------------------------------*/
+
+/* Styles */
+
+/* HEADER NAV: No tocar nada. Est menú debe quedar así tal cual para cada sección */
+
+body {
+    background-color: var(--colorClaro);
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+header {
+    background-color: var(--colorSecundario);
+    padding: .5rem;
+    padding-left: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header_logo {
+    width: auto;
+    height: 40px;
+    cursor: pointer;
+    margin: .5rem;
+}
+
+.header_nav_enlaces {
+    list-style: none;  
+}
+
+.header_nav_enlaces li {
+    display: inline-block;
+    padding: 0 2rem;
+    justify-content: center;
+}
+
+.header_nav_enlaces li:hover{
+    transform: scale(1.1);
+}
+
+.header_nav_enlaces li a {
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    color: var(--colorOscuro);
+}
+
+.header_nav_enlaces li a:hover {
+    color: var(--colorPrimario);
+}
+
+.header_nav_enlaces li a:focus {
+    color: var(--colorPrimario);
+}
+
+/*-----------------------------------------------------------------------------------------------------------------*/
+
+/* MAIN: pueden eliminar el contenido del main para que cada uno coloque su contenido en el CSS */
+
+main {
+    background-color: var(--colorClaro);
+    padding: 6rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+h1 {
+    font-size: 4rem;
+    margin: 1rem;
+    font-weight: 300;
+    color: var(--colorOscuro);
+}
+
+h1 span {
+    font-weight: 700;
+    color: var(--colorPrimario);
+}
+
+.logo {
+    margin: 1rem;
+    height: 15rem;
+}
+
+/*-----------------------------------------------------------------------------------------------------------------*/
+
+/* FOOTER */
+
+footer section {
+    align-items: center;
+    
+}
+
+footer {
+    padding: 1rem;
+    background-color: var(--colorSecundario);
+    margin-top: auto;
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--colorOscuro);
+    padding-left: 3rem;
+}
+
+footer i:hover{
+    transform: scale(1.5);
+}
+
+h2 {
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+#footer_info {
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#copyright_section {
+    text-align: center;
+    margin-bottom: 0;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------------*/
+
+#main_servicios{
+    background-color: var(--colorPrimario);
+    padding: 6rem 2rem;
+    width: 100%;
+    height: 100%;
+}
+
+.seccion_servicios{
+    display: flex; 
+}
+
+
+.servicios_art_dis{
+    background-color: var(--colorClaro);
+    padding: 1%;
+    margin: 2%;
+    border-radius: 15% / 40%;
+    text-align: center;
+}
+
+.servicios_art_web{
+    background-color: var(--colorClaro);
+    padding: 1%;
+    margin: 2%;
+    border-radius: 15% / 40%;
+    text-align: center;
+    animation-delay: 0.4s;
+}
+
+.servicios_art_mrk{
+    background-color: var(--colorClaro);
+    padding: 1%;
+    margin: 2%;
+    border-radius: 15% / 40%;
+    text-align: center;
+    animation-delay: 0.8s;
+}
+
+img{
+    height: 50%;
+    width: 50%;
+    border-radius: .5rem;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+.fade_in_up1{
+    animation:fadeInUp 1s ease backwards;
+}
+
+.fade_in_up2{
+    animation:fadeInUp 1s ease backwards;
+    animation-delay: 0.4s;
+}
+
+.fade_in_up3{
+    animation:fadeInUp 1s ease backwards;
+    animation-delay: 0.8s;
+}
+
+@keyframes fadeInUp{
+    0%{
+        transform: translate(0px, 100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translate(0px, 0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInLeft{
+    0%{
+        left: 0px; top: 0px;
+    }
+    100%{
+        left: 100px; top: 0px;
+    }
+}
+
+@keyframes fadeIndown{
+    0%{
+        transform: translate(100px, 0px)
+    }
+    100%{
+        transform: translate(0, 0px)
+    }
+}
+
+.tooltip1 {
+    position: relative;
+}
+
+.tooltip1:before{
+    content: attr(mensaje);
+    position: absolute;
+    bottom: -12%;
+    left: 0;
+    width: max-content;
+    max-width: 320%;
+    background-color: var(--colorSecundario);
+    color: var(--colorOscuro);
+    text-align: center;
+    padding: 1rem;
+    border-radius: 5% / 15%;
+
+    font-size: 1.7rem;
+    pointer-events: none;
+    transition: opacity .3s;
+
+    z-index: 10;
+    opacity: 0;
+}
+
+.tooltip1:hover::before{
+    opacity: 1;
+    animation:fadeInLeft 1s ease normal;
+}
+
+.tooltip2 {
+    position: relative;
+}
+
+.tooltip2:before{
+    content: attr(mensaje);
+    position: absolute;
+    bottom: -18%;
+    left: -113.5%;
+    width: max-content;
+    max-width: 320%;
+    background-color: var(--colorSecundario);
+    color: var(--colorOscuro);
+    text-align: center;
+    padding: 1rem;
+    border-radius: 5% / 15%;
+
+    font-size: 1.5rem;
+    pointer-events: none;
+    transition: opacity .3s;
+
+    z-index: 10;
+    opacity: 0;
+}
+
+.tooltip2:hover::before{
+    opacity: 1;
+    animation:fadeInUp 1s ease normal;
+}
+
+.tooltip3 {
+    position: relative;
+}
+
+.tooltip3:before{
+    content: attr(mensaje);
+    position: absolute;
+    bottom: -15%;
+    left: -227.5%;
+    width: max-content;
+    max-width: 320%;
+    background-color: var(--colorSecundario);
+    color: var(--colorOscuro);
+    text-align: center;
+    padding: 1rem;
+    border-radius: 5% / 15%;
+
+    font-size: 1.5rem;
+    pointer-events: none;
+    transition: opacity .3s;
+
+    z-index: 10;
+    opacity: 0;
+}
+
+.tooltip3:hover::before{
+    opacity: 1;
+    animation:fadeInDown 1s ease normal;
+}
