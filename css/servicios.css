@@ -27,7 +27,6 @@ body {
     min-height: 100vh;
 }
 
-
 header {
     background-color: var(--colorSecundario);
     padding: .5rem;
@@ -45,7 +44,7 @@ header {
 }
 
 .header_nav_enlaces {
-    list-style: none;  
+    list-style: none;
 }
 
 .header_nav_enlaces li {
@@ -54,7 +53,7 @@ header {
     justify-content: center;
 }
 
-.header_nav_enlaces li:hover{
+.header_nav_enlaces li:hover {
     transform: scale(1.1);
 }
 
@@ -73,18 +72,13 @@ header {
     color: var(--colorPrimario);
 }
 
-/*-----------------------------------------------------------------------------------------------------------------*/
-
-/* MAIN: pueden eliminar el contenido del main para que cada uno coloque su contenido en el CSS */
-
 main {
     background-color: var(--colorClaro);
     padding: 6rem 2rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 100%;
+    flex-wrap: wrap; 
 }
 
 h1 {
@@ -104,15 +98,6 @@ h1 span {
     height: 15rem;
 }
 
-/*-----------------------------------------------------------------------------------------------------------------*/
-
-/* FOOTER */
-
-footer section {
-    align-items: center;
-    
-}
-
 footer {
     padding: 1rem;
     background-color: var(--colorSecundario);
@@ -125,7 +110,7 @@ footer a {
     padding-left: 3rem;
 }
 
-footer i:hover{
+footer i:hover {
     transform: scale(1.5);
 }
 
@@ -145,93 +130,95 @@ h2 {
     margin-bottom: 0;
 }
 
-/*--------------------------------------------------------------------------------------------------------------------------*/
-
-#main_servicios{
+#main_servicios {
     background-color: var(--colorPrimario);
     padding: 6rem 2rem;
-    width: 100%;
-    height: 100%;
 }
 
-.seccion_servicios{
-    display: flex; 
+.seccion_servicios {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
 }
 
-
-.servicios_art_dis{
+.servicios_art_dis,
+.servicios_art_web,
+.servicios_art_mrk {
     background-color: var(--colorClaro);
     padding: 1%;
-    margin: 2%;
+    margin: 1%;
     border-radius: 15% / 40%;
+    text-align: center;
+    flex-basis: 30%;
+}
+
+.tarjeta section {
+    display: flex;
+    align-items: normal;
+    flex-direction: column;
+    max-width: 30%;
+    margin: 0 auto;
     text-align: center;
 }
 
-.servicios_art_web{
-    background-color: var(--colorClaro);
-    padding: 1%;
-    margin: 2%;
-    border-radius: 15% / 40%;
-    text-align: center;
-    animation-delay: 0.4s;
-}
-
-.servicios_art_mrk{
-    background-color: var(--colorClaro);
-    padding: 1%;
-    margin: 2%;
-    border-radius: 15% / 40%;
-    text-align: center;
-    animation-delay: 0.8s;
-}
-
-img{
+.tarjeta img {
+    order: 1;
     height: 50%;
     width: 50%;
     border-radius: .5rem;
-    margin-top: 10%;
-    margin-bottom: 10%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    margin-left: 1%;
+    margin-right: 1%;
 }
 
-.fade_in_up1{
-    animation:fadeInUp 1s ease backwards;
+.tarjeta h3 {
+    order: 2;
+
 }
 
-.fade_in_up2{
-    animation:fadeInUp 1s ease backwards;
+.fade_in_up1 {
+    animation: fadeInUp 1s ease backwards;
+}
+
+.fade_in_up2 {
+    animation: fadeInUp 1s ease backwards;
     animation-delay: 0.4s;
 }
 
-.fade_in_up3{
-    animation:fadeInUp 1s ease backwards;
+.fade_in_up3 {
+    animation: fadeInUp 1s ease backwards;
     animation-delay: 0.8s;
 }
 
-@keyframes fadeInUp{
-    0%{
+@keyframes fadeInUp {
+    0% {
         transform: translate(0px, 100px);
         opacity: 0;
     }
-    100%{
+    100% {
         transform: translate(0px, 0);
         opacity: 1;
     }
 }
 
-@keyframes fadeInLeft{
-    0%{
-        left: 0px; top: 0px;
+@keyframes fadeInLeft {
+    0% {
+        left: 0px;
+        top: 0px;
     }
-    100%{
-        left: 100px; top: 0px;
+    100% {
+        left: 100px;
+        top: 0px;
     }
 }
 
-@keyframes fadeIndown{
-    0%{
+@keyframes fadeIndown {
+    0% {
         transform: translate(100px, 0px)
     }
-    100%{
+    100% {
         transform: translate(0, 0px)
     }
 }
@@ -240,7 +227,7 @@ img{
     position: relative;
 }
 
-.tooltip1:before{
+.tooltip1:before {
     content: attr(mensaje);
     position: absolute;
     bottom: -12%;
@@ -253,7 +240,7 @@ img{
     padding: 1rem;
     border-radius: 5% / 15%;
 
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     pointer-events: none;
     transition: opacity .3s;
 
@@ -261,19 +248,19 @@ img{
     opacity: 0;
 }
 
-.tooltip1:hover::before{
+.tooltip1:hover::before {
     opacity: 1;
-    animation:fadeInLeft 1s ease normal;
+    animation: fadeInLeft 1s ease normal;
 }
 
 .tooltip2 {
     position: relative;
 }
 
-.tooltip2:before{
+.tooltip2:before {
     content: attr(mensaje);
     position: absolute;
-    bottom: -18%;
+    bottom: -25%;
     left: -113.5%;
     width: max-content;
     max-width: 320%;
@@ -291,19 +278,19 @@ img{
     opacity: 0;
 }
 
-.tooltip2:hover::before{
+.tooltip2:hover::before {
     opacity: 1;
-    animation:fadeInUp 1s ease normal;
+    animation: fadeInUp 1s ease normal;
 }
 
 .tooltip3 {
     position: relative;
 }
 
-.tooltip3:before{
+.tooltip3:before {
     content: attr(mensaje);
     position: absolute;
-    bottom: -15%;
+    bottom: -23%;
     left: -227.5%;
     width: max-content;
     max-width: 320%;
@@ -321,7 +308,42 @@ img{
     opacity: 0;
 }
 
-.tooltip3:hover::before{
+.tooltip3:hover::before {
     opacity: 1;
-    animation:fadeInDown 1s ease normal;
+    animation: fadeInDown 1s ease normal;
+}
+
+@media screen and (max-width: 480px) {
+    .seccion_servicios {
+      flex-direction: column;
+    }
+
+    .tooltip1:before{
+        max-width: fit-content;
+        max-height: min-content;
+        top: -80%;  
+    }
+
+    .tooltip2:before{
+        max-width: fit-content;
+        max-height: max-content;
+        top: -215%;
+        left: 0%;  
+    }
+
+    .tooltip3:before {
+        max-width: fit-content;
+        max-height: min-content;
+        top: -310%;
+        left:0%  
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .tooltip1:before,
+    .tooltip2:before,
+    .tooltip3:before {
+      font-size: .85rem;
+    }
 }
