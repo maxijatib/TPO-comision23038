@@ -13,9 +13,7 @@
     <!--Font Awesome-->
     <script src="https://kit.fontawesome.com/9558700994.js" crossorigin="anonymous"></script>
     <!--Aanimaciones-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-
-</head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/></head>
 <body>
     <header>
         <img class="header_logo" src="/img/tuki-logo-google-ads.png" alt="tuki-logo-google-ads" href="/index.html">
@@ -77,16 +75,25 @@
                     problemas técnicos y brindar asistencia continua.</p>
             </article>
         </section>
-        <!-- SECCION DE API -->
+        <!-- Tarjeta de usuarios generado por API -->
         <section class="equipo_api">
-            <p>COLOCAR ACA LA API</p>
+            <h4>Conoce a nuestro equipo:</h4>
+            <br>
+            <article class="tarjeta_user">
+                <img src="" alt="foto" id="foto">
+                <p id="nombreCompleto"></p>
+                <p id="correoElectronico"></p>
+                <p id="telefono"></p>
+            </article>
+            <br>
+            <button id="boton">Otro</button>
         </section>
         <!-- Boton de contacto con acceso a seccion 'Contacto' -->
         <section class="llamada_contacto">
             <p>Te gustaria contar con nuestros servicios?</p>
             <button class="boton_contacto" role="button"><a style="text-decoration: none; color: black;" id="contacto" href="/contacto.html">Contactanos!</a></button>
         </section>
-        <!-- Seccion creada por Nicolas Fuentes - DNI 40.771.299 -->
+        <!-- Seccion creada en conjunto con el eqipo del TPO (Maximiliano Jatib , Nicolas Fuentes y Francisco Xavier Prado)-->
     </main>
     <footer>
         <section id="footer_info">
@@ -101,5 +108,7 @@
             <p>&copy; Copyright 2023 Tuki</p>
         </section>
     </footer>
+    <!-- Script perteneciente a la API -->
+    <script src="./js/app.js"></script>
 </body>
 </html>

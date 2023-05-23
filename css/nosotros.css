@@ -122,14 +122,48 @@ header {
     font-size: 1.3em;
     padding-left: 1.5rem;
 }
-/* API */
+/* Estilos pertenecientes a seccion de API (Tarjeta de usuarios) */
 .equipo_api{
-    border: 2px solid blue;
     width: 100%;
     padding: 5rem;
     text-align: center;
     font-size: 2em;
 }
+.tarjeta_user {
+    border-radius: 1rem;
+    padding: 1rem;
+    box-shadow: 0px 5px 8px 4px rgba(0,0,0,0.32);
+}
+.tarjeta_user img{
+    height: 12rem;
+    border-radius: 50%;
+}
+.tarjeta_user p {
+    padding: 0.8rem;
+}
+.equipo_api button{
+    min-width: 130px;
+    height: 40px;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5), 7px 7px 20px 0px rgba(0,0,0,.1), 4px 4px 5px 0px rgba(0,0,0,.1);
+    background: var(--colorOscuro);
+    font-size: .6em;
+    }
+.equipo_api button:hover {
+    background-color: var(--colorPrimario);
+    }
+.equipo_api button:hover {
+    top: 2px;
+    }
 /* Boton de contacto con acceso a seccion 'Contacto' */
 .llamada_contacto {
     display: flex;
@@ -200,7 +234,7 @@ header {
         transition: transform .2s;
     }
 }
-/* Seccion creada por Nicolas Fuentes - DNI 40.771.299 en colaboracion con Francisco Xavier Prado */
+/* Seccion creada por Nicolas Fuentes - DNI 40.771.299 en colaboracion con Francisco Xavier Prado y Maximiliano Jatib */
 /*-----------------------------------------------------------------------------------------------------------------*/
 
 /* FOOTER */
