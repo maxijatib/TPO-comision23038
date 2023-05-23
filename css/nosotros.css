@@ -157,8 +157,8 @@ header {
     opacity: 1;
     outline: 0 solid transparent;
     padding: 8px 18px;
-    user-select: none;
     -webkit-user-select: none;
+    user-select: none;
     touch-action: manipulation;
     width: fit-content;
     word-break: break-word;
@@ -171,6 +171,13 @@ header {
     background: var(--colorSecundario);
     transform: scale(1.1);
 }
+
+.contenedor{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
 /* Media query */
 @media only screen and (max-width: 1300px){
     .titulo_container {
